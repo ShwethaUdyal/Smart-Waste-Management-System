@@ -1,7 +1,12 @@
 from flask import Flask, jsonify
-
+from database import create_table
 app = Flask(__name__)
-
+#Create databse table when the application starts
+try:
+    create_table()
+    print("PostgreSQL database connected succesfully.")
+except Exception as e:
+    print("Database connection failed:",e)
 
 @app.route("/")
 def home():
