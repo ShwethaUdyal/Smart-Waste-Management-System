@@ -85,12 +85,12 @@ if __name__ == "__main__":
     except Exception as e:
         print("Database connection failed:", e)
 
-    mqtt_thread = threading.Thread(
-        target=start_mqtt,
-        daemon=True
-    )
+    # mqtt_thread = threading.Thread(
+    #     target=start_mqtt,
+    #     daemon=True
+    # )
 
-    mqtt_thread.start()
+    # mqtt_thread.start()
 
     app.run(
         host="0.0.0.0",
